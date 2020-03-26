@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Adesāo Viagens</string>
+    <string name="txtTitulo">Especiais</string>
+    <string name="txtPais">Brasil</string>
+    <string name="txtCidade">Sāo Paulo</string>
+    <string name="txtDias">2 Dias</string>
+    <string name="txtValor">R$ 2.509,34</string>
+</resources>
