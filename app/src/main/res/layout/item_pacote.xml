@@ -5,65 +5,91 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/img"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crvCartao"
         android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:src="@sample/pacotes.json/pacotes/imagem" />
-
-    <TextView
-        android:id="@+id/txtcidade"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@android:drawable/screen_background_dark_transparent"
-        android:padding="8dp"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/img"
-        app:layout_constraintEnd_toEndOf="@id/img"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/img"
-        app:layout_constraintTop_toTopOf="@id/img"
-        app:layout_constraintVertical_bias="1.0"
-        tools:text="@sample/pacotes.json/pacotes/local" />
-
-    <View
-        android:id="@+id/viwDivisor"
-        android:layout_width="0dp"
-        android:layout_height="3dp"
-        android:background="@android:color/holo_orange_dark"
+        android:layout_marginStart="8dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/txtDias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viwDivisor"
-        tools:text="@sample/pacotes.json/pacotes/dias" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="225dp">
 
-    <TextView
-        android:id="@+id/txtValor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="21sp"
-        app:layout_constraintStart_toStartOf="@id/txtDias"
-        app:layout_constraintTop_toBottomOf="@id/txtDias"
-        tools:text="@sample/pacotes.json/pacotes/preco" />
+            <ImageView
+                android:id="@+id/imgItemPacoteLocal"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:contentDescription="@string/img"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@sample/pacotes.json/pacotes/imagem" />
+
+            <TextView
+                android:id="@+id/txtItemPacoteCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imgItemPacoteLocal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.052"
+                app:layout_constraintStart_toStartOf="@+id/imgItemPacoteLocal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.98"
+                tools:text="@sample/pacotes.json/pacotes/local" />
+
+            <View
+                android:id="@+id/viwDivisor"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:background="@android:color/holo_orange_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgItemPacoteLocal"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txtResumoDias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgItemPacoteLocal"
+                tools:text="@sample/pacotes.json/pacotes/dias" />
+
+            <TextView
+                android:id="@+id/txtItemPacoteValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="21sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtResumoDias"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="@sample/pacotes.json/pacotes/preco" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

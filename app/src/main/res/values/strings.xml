@@ -5,4 +5,10 @@
     <string name="txtCidade">Sāo Paulo</string>
     <string name="txtDias">2 Dias</string>
     <string name="txtValor">R$ 2.509,34</string>
+    <string name="img">Imagem da Cidade</string>
+    <string name="todo">TODO</string>
+    <string name="imgLocal">Foto local famoso da cidade</string>
+    <string name="txtlocal">Sāo Paulo</string>
+    <string name="lblPreco">Preço Final</string>
+    <string name="btnPagamento">Realizar pagamento</string>
 </resources>
